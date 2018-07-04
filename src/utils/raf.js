@@ -21,7 +21,7 @@
 import { window } from 'global';
 
 export const requestAnimationFrame = (fn, ...rest) => {
-  if (window && {}.hasOwnProperty.call(window, 'cancelAnimationFrame')) {
+  if (window && {}.hasOwnProperty.call(window, 'requestAnimationFrame')) {
     window.requestAnimationFrame(fn, ...rest);
   } else {
     fn(...rest);
